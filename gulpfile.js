@@ -24,7 +24,7 @@ var paths = {
 	dist: './assets/dist',
 };
 
-var prefixSettings = ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'];
+var prefixSettings = ['last 2 versions', '>1%', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'];
 
 gulp.task('bs', function () {
 	browserSync.init({
@@ -35,7 +35,7 @@ gulp.task('bs', function () {
 gulp.task('styles', function () {
 	var plugins = [
 		autoprefixer({
-			browsers: ['>1%']
+			browsers: prefixSettings
 		}),
 		cssnano(),
 		mqpacker({
