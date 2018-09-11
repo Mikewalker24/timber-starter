@@ -88,7 +88,7 @@ new StarterSite();
  */
 
 // Enqueue scripts
-function my_scripts() {
+function kindred_scripts() {
 
 	// Use jQuery from a CDN
 	wp_deregister_script('jquery');
@@ -100,7 +100,7 @@ function my_scripts() {
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/dist/scripts.min.js', array('jquery'), '1.0.0', true );
 }
 
-add_action( 'wp_enqueue_scripts', 'my_scripts' );
+add_action( 'wp_enqueue_scripts', 'kindred_scripts' );
 
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();

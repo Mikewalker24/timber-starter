@@ -1,0 +1,48 @@
+#home-1 {
+  padding-bottom: 7rem;
+  .hero-heading {
+    margin: 7rem 0 0;
+    text-align: center;
+  }
+}
+
+#home-2 {
+  .flex {
+    align-items: stretch;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+  }
+  .left,
+  .right {
+    flex-basis: 50%;
+  }
+}
+
+#home-3 {
+  padding: 12.5rem 0;
+  .flex {
+    align-items: stretch;
+  }
+  .left {
+    flex-basis: 63%;
+  }
+  .right {
+    flex: 1;
+    padding-left: 6.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+      max-width: 282px;
+    }
+    a {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

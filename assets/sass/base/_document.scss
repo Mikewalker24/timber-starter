@@ -1,0 +1,14 @@
+html {
+  background: $white;
+  font-size: $html-font-size;
+  min-height: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  background-color: $white;
+  color: $color_text;
+  font-family: $sans-serif;
+  letter-spacing: $point05;
+}

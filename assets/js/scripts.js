@@ -1,21 +1,55 @@
-$(document).ready( function() {
-
-	const square = x => x * x;
-
+$(document).ready(() => {
 	
-	let fuck = 'what-the-fuck?';
+	const body = $('body');
 
-	console.log(square(5));
-	
-	// Put some nice JavaScript in here.
-	var $nav_main = $('.nav-main'),
-		$nav_trigger = $('.nav-trigger');
+	// Slide out nav
 
-	$nav_trigger.click( function() {
-		console.log('clicked!');
-		$nav_main.toggleClass('active');
-		$nav_trigger.toggleClass('active');
+	const slideOut = $('.slide-out');
+	const navTrigger = $('.nav-trigger');
+	const navClose = $('.nav-close');
+
+	function closeNav() {
+		slideOut.removeClass('active');
+		navTrigger.removeClass('active');
+	}
+
+	navTrigger.on('click', () => {
+		slideOut.toggleClass('active');
+		navTrigger.toggleClass('active');
+
+		body.on('click', closeNav);
+
 		return false;
 	});
 
+	navClose.on('click', closeNav);
+
+	// Responsive slider
+
+	const slider = $('.slider');
+
+	const sliderSettings = {
+		arrows: false,
+		dots: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		centerMode: true,
+	};
+
+	const slickInit = () => {
+		const width = window.innerWidth;
+		const shouldInit = width <= 768 && slider;
+		const alreadyInit = slider.hasClass('slick-initialized');
+
+		if (shouldInit && !alreadyInit) {
+			slider.slick(sliderSettings);
+		} else if (!shouldInit && alreadyInit) {
+			slider.slick('unslick');
+		}
+	};
+
+	if (slider) {
+		window.addEventListener('resize', slickInit);
+		slickInit();
+	}
 });

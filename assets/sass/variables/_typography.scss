@@ -1,19 +1,27 @@
+$html-font-size: 16px;
 $sans-serif: sans-serif;
-$serif: serif;
-
-$font-size-h1: 3.125rem;
+$serif-paragraph: "adobe-caslon-pro",
+serif;
+$serif-heading: "orpheuspro",
+serif;
+$font-size-h1: 1.75rem;
 $font-size-h1--r: 1.5625rem;
-
-$font-size-h2: 2.5rem;
+$font-size-h2: 2rem;
 $font-size-h2--r: 1.875rem;
-
-$font-size-h3: 1.125rem;
-
+$font-size-h3: 0.8125rem;
 $font-size-p: 1rem;
 $font-size-p--r: 0.9375rem;
-
 $font-size-small: 0.875rem;
-
 $light: 300;
 $regular: 500;
 $bold: 700;
+$point01: .01em;
+$point02: .02em;
+$point03: .03em;
+$point04: .04em;
+$point05: .05em;
+$point06: .06em;
+$point07: .07em;
+$point08: .08em;
+$point09: .09em;
+$point1: .1em;
