@@ -1,9 +1,8 @@
+// Fonts
 $html-font-size: 16px;
 $sans-serif: sans-serif;
-$serif-paragraph: "adobe-caslon-pro",
-serif;
-$serif-heading: "orpheuspro",
-serif;
+$serif-paragraph: 'adobe-caslon-pro', serif;
+$serif-heading: 'orpheuspro', serif;
 $font-size-h1: 1.75rem;
 $font-size-h1--r: 1.5625rem;
 $font-size-h2: 2rem;
@@ -12,16 +11,22 @@ $font-size-h3: 0.8125rem;
 $font-size-p: 1rem;
 $font-size-p--r: 0.9375rem;
 $font-size-small: 0.875rem;
+// Weights
 $light: 300;
 $regular: 500;
 $bold: 700;
-$point01: .01em;
-$point02: .02em;
-$point03: .03em;
-$point04: .04em;
-$point05: .05em;
-$point06: .06em;
-$point07: .07em;
-$point08: .08em;
-$point09: .09em;
-$point1: .1em;
+// Letter spacing
+$point01: 0.01em;
+$point02: 0.02em;
+$point03: 0.03em;
+$point04: 0.04em;
+$point05: 0.05em;
+$point06: 0.06em;
+$point07: 0.07em;
+$point08: 0.08em;
+$point09: 0.09em;
+$point1: 0.1em;
+$point2: 0.2em;
+$point3: 0.3em;
+$point4: 0.4em;
+$point5: 0.5em;

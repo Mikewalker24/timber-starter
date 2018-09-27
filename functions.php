@@ -58,7 +58,7 @@ function add_to_context( $context ) {
 
 	// Add menus to context
 	$context['primaryNav'] = new TimberMenu('Primary Nav');
-	$context['footerMenu'] = new TimberMenu('Footer Menu');
+	$context['footerNav'] = new TimberMenu('Footer Nav');
 
 	// Add options to context
 	$context['options'] = get_fields('option');
@@ -80,15 +80,14 @@ function add_to_context( $context ) {
 
 new StarterSite();
 
-
 /*
- *
- * My Functions (not from Timber)
- *
- */
+ 
+ Walker theme functions
+
+*/
 
 // Enqueue scripts
-function kindred_scripts() {
+function walker_scripts() {
 
 	// Use jQuery from a CDN
 	wp_deregister_script('jquery');
@@ -98,11 +97,34 @@ function kindred_scripts() {
 	// Note that we aren't using WordPress' default style.css, and instead enqueueing the file of compiled Sass.
 	wp_enqueue_style( 'styles', get_template_directory_uri() . '/assets/dist/style.css', 1.0);
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/dist/scripts.min.js', array('jquery'), '1.0.0', true );
+
+	wp_register_script(
+		'slickjs',
+		get_template_directory_uri() . '/assets/vendor/slick/slick.min.js',
+		array('jquery')
+	);
+
+	wp_enqueue_script('slickjs');
+
+	wp_enqueue_style(
+		'slickcss', 
+		get_stylesheet_directory_uri() . '/assets/vendor/slick/slick.css', 
+		'1.6.0', 
+		'all');
+
+	wp_enqueue_style(
+		'slickcsstheme',
+		get_stylesheet_directory_uri() . '/assets/vendor/slick/slick-theme.css', 
+		'1.6.0', 
+		'all'
+	);
 }
 
-add_action( 'wp_enqueue_scripts', 'kindred_scripts' );
+add_action( 'wp_enqueue_scripts', 'walker_scripts' );
 
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
 
+// Custom image sizes
+// add_image_size( 'hero', 1800, 900, true );

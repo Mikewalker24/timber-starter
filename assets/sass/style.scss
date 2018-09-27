@@ -1,16 +1,5 @@
-/*
-Theme Name: Kindred Timber Starter
-Author: Mike Walker
-Author URI: http://mikewalker.co
-Description: WordPress starter theme based on Timber Tackle-Box Starter
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: Kindred
-*/
-
-@import "variables/index";
-@import "mixins/index";
-@import "base/index";
-@import "components/index";
-@import "layout/index";
+@import 'variables/index';
+@import 'mixins/index';
+@import 'base/index';
+@import 'components/index';
+@import 'layout/index';

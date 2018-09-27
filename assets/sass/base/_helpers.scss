@@ -2,18 +2,22 @@
   width: 80%;
   max-width: 1366px;
   margin: 0 auto;
+
   &--small {
     width: 75%;
     max-width: 1080px;
   }
+
   &--xl {
-    max-width: 1707px;
     width: 90%;
+    max-width: 1707px;
     margin: 0 auto;
   }
+
   @include media('<=550px') {
     width: 90%;
   }
+
   &.full-r {
     @include media('<=768px') {
       width: 100%;
