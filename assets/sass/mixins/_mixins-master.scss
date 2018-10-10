@@ -23,13 +23,6 @@
   }
 }
 
-// Wrapper class
-@mixin wrap {
-  width: 90%;
-  max-width: 1366px;
-  margin: 0 auto;
-}
-
 //CSS triangles
 @mixin css-triangle(
   $color,
